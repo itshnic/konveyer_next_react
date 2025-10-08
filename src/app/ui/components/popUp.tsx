@@ -1,12 +1,25 @@
-import style from "./popUp.module.css";
+"use client";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function PopUp() {
+	const [vis, setVis] = useState("hidden");
+
+	function getBlock() {
+		if (vis == "hidden") {
+			setVis("block");
+		} else setVis("hidden");
+	}
 	return (
-		<div className={style.popUp__container}>
-			<span className={style.popUp__title}>Табель</span>
-			<ul className={style.popUp__list}>
-				<li className="popUp__item">
+		<div className="text-[white]  bg-[#23272C] p-[5px]">
+			<span
+				onClick={getBlock}
+				className="font-bold after:content-['<'] cursor-pointer"
+			>
+				Табель
+			</span>
+			<ul className={`p-[5px] ${vis}`}>
+				<li className="">
 					<Link href="https://online-workvista.ru/indicators">Операторы</Link>
 				</li>
 				<li>

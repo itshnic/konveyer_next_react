@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "@/app/ui/css/mainPage.module.css";
-import Nav from "@/app/ui/components/Nav/nav";
+import Nav from "@/app/ui/components/nav";
 
 export default function Home() {
 	return (
